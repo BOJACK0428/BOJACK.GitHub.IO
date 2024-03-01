@@ -21,18 +21,18 @@
 <meta property="og:url" content="http://example.com/2024/02/26/bjk10/index.html">
 <meta property="og:site_name" content="BoJack&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2024/02/26/bjk10/bjk10/Snipaste_2024-02-26_17-52-00.jpg">
-<meta property="og:image" content="http://example.com/2024/02/26/bjk10/bjk10/Snipaste_2024-02-26_17-52-27.jpg">
+<meta property="og:image" content="http://example.com/2024/02/26/bjk10/Snipaste_2024-02-26_17-52-00.jpg">
+<meta property="og:image" content="http://example.com/2024/02/26/bjk10/Snipaste_2024-02-26_17-52-27.jpg">
 <meta property="og:image" content="http://example.com/2024/02/26/bjk10/image-20240226181939235.png">
 <meta property="og:image" content="http://example.com/2024/02/26/bjk10/image-20240227174814479.png">
 <meta property="og:image" content="http://example.com/2024/02/26/bjk10/image-20240227175002364.png">
 <meta property="og:image" content="http://example.com/2024/02/26/bjk10/image-20240227175133917.png">
 <meta property="og:image" content="http://example.com/2024/02/26/bjk10/image-20240227181133095.png">
 <meta property="article:published_time" content="2024-02-26T09:46:25.000Z">
-<meta property="article:modified_time" content="2024-03-01T03:31:43.284Z">
+<meta property="article:modified_time" content="2024-03-01T03:37:55.792Z">
 <meta property="article:author" content="BOJACK">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2024/02/26/bjk10/bjk10/Snipaste_2024-02-26_17-52-00.jpg">
+<meta name="twitter:image" content="http://example.com/2024/02/26/bjk10/Snipaste_2024-02-26_17-52-00.jpg">
   
   
   
@@ -279,9 +279,9 @@
               <div class="markdown-body">
                 
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><span id="more"></span>前言</h2><p>公司一个老项目使用的是springboot，然后需要在这个项目上加一个sentinel流量哨兵，这一步不难，需要注意的是sentinel的依赖实在是太复杂了，而且很多老版本的已经不兼容了，所以建议大家新建一个springboot项目，脚手架选择阿里的springcloud alibaba框架，可以一键下载安装sentinel的相关依赖，不用担心版本兼容问题。（此方法来源于CSDN某网友，一时找不到原文章原作者了，在此再次表示感谢和歉意）</p>
-<img src="bjk10/Snipaste_2024-02-26_17-52-00.jpg" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-02-26_17-52-00" style="zoom:50%;" />
+<img src="/2024/02/26/bjk10/Snipaste_2024-02-26_17-52-00.jpg" srcset="/img/loading.gif" lazyload class="" title="image-01">
 
-<img src="bjk10/Snipaste_2024-02-26_17-52-27.jpg" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-02-26_17-52-27" style="zoom:50%;" />
+<img src="/2024/02/26/bjk10/Snipaste_2024-02-26_17-52-27.jpg" srcset="/img/loading.gif" lazyload class="" title="image-02">
 
 <p>安装好sentinel后，会发现sentinel的规则是存储在内存当中的，也就是说一旦服务器重启，那么里面的规则将全部丢失。所以我们需要将sentinel的规则进行持久化。最常见的持久化方式当然是使用nacos，但是这个项目是一个springboot项目，并没有配置nacos，所以也没必要仅为了一个sentinel再去配置一套nacos。于是将规则持久化到数据库中也是个不错的选择。</p>
 <p>在网上查阅资料后发现，网上已经有很多sentinel+MySQL的案例了，却没有oracle的案例，于是自己动手将网友大佬们的MySQL改造了一下，改成了oracle版本，MySQL原文链接在此，表示感谢。</p>
